@@ -1,0 +1,119 @@
+@import url(/styles/nav-bar.css);
+@import url(/styles/footer.css);
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    max-width: 1440px;
+    margin: 0;
+    color: black;
+    overflow-x: hidden;
+}
+
+.hero-menu-content{
+    z-index: 1; /*Para o dropdown menu ficar acima do 'sign-up-box*/
+}
+
+main{
+    background-image: url(/images/backgrounds/sign\ up.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 128vh;
+}
+
+label{
+    margin-top: 1rem; /*Para haver menos espaçamento entre os titulos e caber tudo na página sem aumentar o tamanho da página e/ou diminuir o tamanho da letra*/
+}
+
+.sign-up-box{
+    z-index: 0; /*Para o "sign-up-box" ficar abaixo do dropdown menu*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*Para alinhar verticalmente*/
+    height: 127.5vh;
+    width: 80%;
+    left: 10%; /*Para alinhar a caixa ao centro do ecrã*/
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    border: 2px solid white;
+}
+
+.sign-up-box-content{
+    margin-left: 1rem; /*Espaçamento entre o texto e a borda esquerda da "sign-up-box"*/
+}
+
+.sign-up-message{
+    font-size: 3.5rem;
+}
+
+.sign-up-email,.sign-up-name,.sign-up-surname,.sign-up-password{
+    font-size: 2rem;
+}
+
+input{
+    margin-bottom: 20px; /*Para acrescentar o espaçamento entre os inputs e as labels*/
+}
+
+.sign-up-email::after,.sign-up-name::after,.sign-up-password::after{
+    content: "*";
+    color: rgb(255, 0, 0);
+}
+
+.input-required-message::before{
+    content: "*";
+    color: red;
+}
+
+.input-required-message{
+    font-size: 1rem;
+}
+
+.input-required-message{
+    margin-bottom: 20px; /*Para haver menos espaçamento entre o "Obrigatório" e a checkbox*/
+}
+
+input{
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(116, 113, 113, 0.9);
+}
+
+input:hover{
+    box-shadow: 0px 10px 20px 2px rgba(134, 130, 130, 0.95);  
+}
+
+.sign-up-submit{
+    /*Dar espaçamento à volta do input*/
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.sign-up-account-created{
+    text-decoration: none;
+    color: white;
+}
+
+.sign-up-submit:hover{
+    background-color: #F9C784;
+}
+
+.sign-up-account-created:hover{
+    text-decoration: underline;
+}
+
+/*--------MEDIA QUERIES-------*/
+@media only screen and (max-width:480px){
+    main{
+        height: 148vh;
+    }
+
+    .sign-up-box{
+        height: 147.5vh;
+    }
+
+    .sign-up-message{
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,94 @@
+@import url(/styles/nav-bar.css);
+@import url(/styles/footer.css);
+
+
+body{
+    font-family: 'Raleway', sans-serif;
+
+    font-size: 1rem;
+    max-width: 100vw;
+    margin: 0;
+    color: black;
+    overflow-x: hidden;
+}
+
+.hero-menu-content{
+    z-index: 1; /*Para o dropdown menu ficar acima do 'sign-up-box*/
+}
+main{
+    background-image: url(/images/backgrounds/sign\ up.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+
+.login-box{
+    z-index: 0; /*Para o "sign-up-box" ficar abaixo do dropdown menu*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*Para alinhar verticalmente*/
+    height: 79.5vh;
+    width: 80%;
+    left: 10%; /*Para alinhar a caixa ao centro do ecrã*/
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    border: 2px solid white;
+}
+
+.login-box-content{
+    margin-left: 1rem;
+}
+
+.login-message{
+    font-size: 4rem;
+}
+
+.login-email,.login-password{
+    font-size: 1.5rem;
+}
+
+input{
+    box-shadow: 0px 5px 10px 0px rgba(116, 113, 113, 0.9);
+    /*Para haver espaçamento entre os inputs e as labels*/
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+input:hover{
+    box-shadow: 0px 10px 20px 2px rgba(134, 130, 130, 0.95);  
+}
+
+.login-email-box,.login-password-box{
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: none;
+}
+
+.login-button{
+    padding: 0.5rem;
+    margin-top: 1rem; /*Para haver um maior espaçamento entre o input onde se coloca a password e o input de submeter*/ 
+    margin-bottom: 1rem; /*Para haver um maior espaçamento entre o input de submeter e o link que redireciona para a pagina de Sign Up*/ 
+    border-radius: 10px;
+    border: none;
+}
+
+.login-button:hover{
+    background-color: #F9C784;
+}
+
+.login-no-account{
+    text-decoration: none;
+    color: white;
+}
+
+.login-no-account:hover{
+    text-decoration: underline;
+}
+
+/*----------MEDIA QUERIES--------------*/
+@media only screen and (max-width:768px){
+    .login-message{
+        font-size: 3rem;
+    }
+}

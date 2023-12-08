@@ -1,0 +1,364 @@
+@import url(/styles/footer.css);
+@import url(/styles/nav-bar.css);
+
+body{
+    font-family: 'Raleway', sans-serif;
+    width: 100vw;
+    margin: 0;
+    color: black;
+    overflow-x: hidden;
+}
+
+nav{
+  position: fixed;
+}
+
+/*----------------------MENSAGEM DE BOAS VINDAS--------------------*/
+.scroll-welcome{
+  position: relative;
+  background-image: url(/images/backgrounds/background-welcome.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.scroll-welcome-text{
+  display: flex;
+  flex-direction: column;
+  position: absolute; /*Para se posicionar relativamente ao background */
+  background-color: rgba(0,0,0,0.4);
+  height: 99.5vh;
+  font-size: 5rem;
+  color: white;
+  justify-content: center; /*Para alinhar verticalmente*/
+  width: 40%;
+  text-align: center; /*Para alinhar horizontalmente*/
+  left: 30%; /*Para alinhar a caixa ao centro do ecrã*/
+  border: 2px solid white;
+}
+
+.scroll-welcome-search-box{
+  /*Para alinhar as caixas ao centro*/
+  display: flex;
+  align-content: center; 
+  justify-content: center;
+  /*------------------------*/
+  gap: 0.5rem;
+}
+
+.welcome-search-bar{
+  border-radius: 10px;
+  border: none;
+}
+
+.welcome-search-icon{
+  background-color: rgb(172, 161, 161);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+}
+
+.welcome-search-icon:hover{
+  background-color: grey;
+}
+/*--------------RECEITAS POPULARES--------------------------------------*/
+.page-line{
+  border: 10px solid black;
+  margin-top: -10px;
+}
+
+.popular-header{
+  text-align: center;
+  font-size: 3rem;
+}
+
+.scroll-popular-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.popular-recipe1,.popular-recipe2,.popular-recipe3,.popular-recipe4,.popular-recipe5,.popular-recipe6{
+  min-width: 10rem;
+  height: 25rem;
+  border: 4px solid black;
+  border-radius: 30px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.9);
+  transition: transform ease .5s, box-shadow ease .5s;
+}
+
+.popular-recipe1:hover,.popular-recipe2:hover,.popular-recipe3:hover,.popular-recipe4:hover,.popular-recipe5:hover,.popular-recipe6:hover{
+  transform: translateY(-5px);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.95);
+}
+
+.scroll-popular-cards img{
+  object-fit: cover;
+  /*Ajustar as imagens para ficarem dentro dos divs*/
+  max-width: 18rem;
+  height: 15rem;
+  width: 18rem;
+  border-bottom: 4px solid black;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  /*------------------------*/
+}
+
+.scroll-popular a{
+  text-decoration: none;
+}
+
+.popular-recipe-category{
+  font-size: 1rem;
+  color: black;
+  margin-top: 0px; 
+  margin-left: 5px;
+  margin-bottom: 0;
+  transition: color ease .5s;
+}
+
+.scroll-popular h3{
+  border: 2px solid black;
+  /*Ajustar espaçamento entre a categoria da receita com o seu nome*/
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+
+.popular-recipe-name{
+  font-size: 1.5rem;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px; /*Colocar espaçamento entre a borda esquerda do cartão e o nome da receita*/
+  transition: color ease .5s;
+}
+
+.popular-recipe-name:hover,.popular-recipe-category:hover{
+  color: rgb(102, 102, 102);
+}
+
+.popular-recipe-time-section{
+  margin-left: 5px;
+}
+
+.popular-recipe-time{
+  margin-top: 0;
+}
+
+.page-line2,.page-line3,.page-line4{
+  border: 5px solid black;
+}
+/*------------------NEWSLETTER---------------------*/
+.scroll-newsletter{
+  background-image: url(/images/backgrounds/newsletter-background.png);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.newsletter-box{
+  display: flex;
+  flex-direction: column;
+  position: absolute; /*Para se posicionar relativamente ao background*/
+  font-size: 2rem;
+  background-color: rgba(0,0,0,0.4);
+  height: 98vh;
+  color: white;
+  justify-content: center; /*Para alinhar verticalmente*/
+  width: 50%;
+  margin-top: -18px; /*Para alinhar a caixa com a borda da imagem de fundo*/
+  text-align: center; /*Para alinhar horizontalmente*/
+  left: 25%; /*Para alinhar a caixa ao centro do ecrã*/
+  border: 2px solid white;
+}
+
+.newsletter-input{
+  /*Para alinhar as caixas ao centro*/
+  display: flex;
+  align-content: center; 
+  justify-content: center;
+  /*------------------------*/
+  gap: 5px;
+}
+
+.scroll-newsletter input{
+  padding: 0.5rem;
+  border-radius: 25px;
+  border: none;
+}
+
+.scroll-newsletter button{
+  border: none;
+  border-radius: 10px;
+  background-color:rgb(172, 161, 161);
+}
+
+.scroll-newsletter button:hover{
+  color: white;
+  background-color: rgb(61, 61, 61);
+  transition: background-color ease 1s;
+  transition: color ease 1s;
+}
+
+/*-------------------------------MENSAGEM MOTIVACIONAL-------------------------*/
+.scroll-motivational{
+  background-image: url(/images/backgrounds/motivational-background.png);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin-top: -1.2rem; /*Para não haver espaço branco entre a newsletter e a mensagem motivacional*/
+}
+
+.motivational-box{
+  display: flex;
+  flex-direction: column;
+  position: absolute; /*Para se posicionar relativamente ao background*/
+  font-size: 2rem;
+  background-color: rgba(0,0,0,0.4);
+  height: 98vh;
+  color: white;
+  justify-content: center; /*Para alinhar verticalmente*/
+  width: 80%;
+  margin-top: -18px; /*Para alinhar a caixa com a borda da imagem de fundo*/
+  text-align: center; /*Para alinhar horizontalmente*/
+  left: 10%; /*Para alinhar a caixa ao centro do ecrã*/
+  border: 2px solid white;
+}
+
+/*---------------------RECEITAS SAZONAIS------------------------*/
+.scroll-seasonal{
+  background-image: url(/images/backgrounds/receitas\ sazonais.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 105vh;
+  margin-top: -18px; /*Para alinhar a caixa com a borda da imagem de fundo*/
+}
+
+.seasonal-header,.seasonal-theme{
+   margin-left: 20px; /*Para não ficar colada à margem esquerda da página */
+}
+
+.seasonal-header{
+  font-size: 2.5rem;
+}
+
+.seasonal-theme{
+  font-size: 2rem;
+}
+
+.seasonal-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.seasonal-box img{
+  object-fit: cover;
+  /*Ajustar as imagens para ficarem dentro dos divs*/
+  max-width: 300px;
+  height: 250px;
+  width: 300px;
+  border-bottom: 4px solid rgb(172, 48, 48);
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.seasonal-box div{
+  min-width: 14rem;
+  height: 25rem;
+  border: 4px solid black;
+  border-radius: 30px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 1);
+  transition: transform ease .5s, box-shadow ease .5s;
+  background-color: white;
+}
+
+.seasonal-box div:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.95);
+}
+
+.seasonal-box a{
+  text-decoration: none;
+}
+
+.seasonal-recipe-name{
+  font-size: 1.5rem;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  transition: color ease .5s;
+}
+
+.seasonal-box div:hover .seasonal-recipe-name{
+  color: rgb(172, 48, 48);
+}
+
+.seasonal-box div svg,.seasonal-recipe-time{
+  margin-left: 5px; /*Para não ficar colada à margem esquerda do cartão*/
+  margin-top: 0; /*Para o tempo de duração da receita ficar mais próxima ao icone do relógio*/
+  color: black;
+}
+
+/*----------------------MEDIA QUERIE-----------------------*/
+
+@media only screen and (max-width: 480px){
+  .scroll-welcome-text{
+    font-size: 2rem;
+    width: 70%;
+    left: 15%;
+  }
+
+  /*--------------------*/
+  .scroll-popular-cards{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .popular-recipe1,.popular-recipe2,.popular-recipe3,.popular-recipe4,.popular-recipe5,.popular-recipe6{
+    max-width: 5rem;
+    max-height: 20rem;
+  }
+
+  .scroll-popular-cards img{
+    max-width: 10rem;
+    max-height: 10rem;
+  }
+
+  .popular-recipe-category{
+    font-size: 0.8rem;
+  }
+
+  .popular-recipe-name{
+    font-size: 1.2rem;
+  }
+  /*--------------------*/
+  .newsletter-box{
+    width: 60%;
+    left: 20%;
+  }
+  /*--------------------*/
+  .scroll-seasonal{
+    height: 170vh;
+  }
+
+  .seasonal-box{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .seasonal-box div{
+    max-width: 5rem;
+    max-height: 20rem;
+  }
+
+  .seasonal-box img{
+    max-width: 14rem;
+    max-height: 10rem;
+  }
+}
